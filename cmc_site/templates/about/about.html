@@ -1,0 +1,47 @@
+{% extends "pages.html" %}
+{% block content %}
+<section class="flat-row section-services pd-bottom6">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="page-company">
+                        <div class="featured">
+                            <img src={{ about_co.aboutus_image.url }} alt="image">          
+                        </div> 
+                        <div class="content-company">
+                            <h4>{{ about_co.title }}</h4> <p>{{ about_co.aboutus_description }}</p>        
+                        </div>
+                        <div class="main-history">
+                            {% for hist in co_history %}
+                            <div class="flat-history clearfix">
+                                <div class="data data-year">
+                                    <div class="year">
+                                        {{ hist.year }}
+                                    </div>
+                                </div>
+                                <div class="data data-info">
+                                    <h4>{{ hist.history_title }}</h4>
+                                    <p>{{ hist.history_description }}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>  
+                </div>
+                <div class="col-md-3">
+                    <div class="sidebar">
+                        <div class="widget widget_contact2">
+                            <h5 class="widget-title style2">Need our help?</h5>
+                            <p>Contact us at the CMC Africa office nearest to you or submit a business inquiry online.</p>
+                            <button type="button" class="flat-button" href="#">Contact Us</button>
+                        </div><!-- /.widget-contact -->
+                        <div class="widget widget_download">
+                            <a href="#"><i class="fa fa-file-word-o"></i>Brochures.doc</a>
+                            <a href="#"><i class="fa fa-file-pdf-o"></i>Brochures.pdf</a>
+                        </div><!-- /.widget-download -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+{% endblock %}

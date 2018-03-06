@@ -1,0 +1,440 @@
+{% load i18n %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <title>{% block title %}About Us - CMC AFRICA(Center of Management and Communication){% endblock %}</title>
+
+    <meta name="author" content="cmcafrica.com">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/bootstrap.css' %}">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/style.css' %}">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/responsive.css' %}">
+
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/colors/color1.css' %}" id="colors">
+
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/animate.css' %}">
+
+    <!-- Favicon and touch icons  -->
+    <link href="icon/apple-touch-icon-48-precomposed.png" rel="icon" sizes="48x48">
+    <link href="icon/apple-touch-icon-32-precomposed.png" rel="icon">
+    <link href="icon/favicon.png" rel="shortcut icon">
+</head>
+
+<body class="header_sticky page-loading">
+    <!-- Preloader -->
+    <div class="loading-overlay">
+    </div>
+
+    <!-- Boxed -->
+    <div class="boxed">
+
+        <div class="flat-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="info-text">CMC Africa - Above & Beyond Your Expectation</p>
+                    </div>
+                    <!-- /.col-md-6 -->
+                    <div class="col-md-6">
+                        <p class="info-link">
+                            <a href="#">+256788422606</a>info@cmcafrica.com</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.top -->
+
+        <div class="flat-header-wrap">
+            <!-- Header -->
+            <div class="header widget-header clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="header-wrap clearfix">
+                            <div class="col-md-3">
+                                <div id="logo" class="logo">
+                                    <a href="index.html" rel="home">
+                                        <img src="images/logo.png" alt="image">
+                                    </a>
+                                </div>
+                                <!-- /.logo -->
+
+                            </div>
+                            <div class="col-md-9">
+                                <div class="wrap-widget-header">
+                                    <div class="widget widget_text">
+                                        <ul class="social-links">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-facebook"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-rss"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <aside id="text-2" class="widget widget_text">
+                                        <div class="textwidget">
+                                            <div class="open-hours">
+                                                <p class="icon">
+                                                    <i class="icon_clock_alt"></i>
+                                                </p>
+                                                <p class="text">Open House
+                                                    <br>
+                                                    <span>Mon - Sat: 8.00 am - 5.30 pm
+                                                        <br>Sunday: CLOSED</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </aside>
+                                    <aside id="text-1" class="widget widget_text">
+                                        <div class="textwidget">
+                                            <div class="open-hours">
+                                                <p class="icon">
+                                                    <i class=" icon_pin_alt"></i>
+                                                </p>
+                                                <p class="text">Address
+                                                    <br>
+                                                    <span>2901 Marmora Road, Central New,
+                                                        <br>United Kingdom.</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </aside>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.header-wrap -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+            </div>
+            <!-- /.header -->
+            <header id="header" class=" header-v1 nav header-style1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="flat-wrap-header">
+                                <div class="nav-wrap">
+                                    <nav id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="{% url 'index' %}">Home</a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="{% url 'about_page' %}">About Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'services_page' %}">Services</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'jobs_page' %}">Jobs</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'events_page' %}">Events</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'gallery_page' %}">Gallery</a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'blog_page' %}">Blog</a>
+                                            </li>
+                                            <li>
+                                                <a href="contact.html">Contact us</a>
+                                            </li>
+                                        </ul>
+                                        <!-- /.menu -->
+                                    </nav>
+                                    <!-- /.mainnav -->
+                                    <div class="widget widget_search top-search">
+                                        <form role="search" method="get" class="search-form" action="#">
+                                            <input type="search" class="search-field" placeholder="Search…" value="" name="s">
+                                            <input type="submit" class="search-submit" id="searchsubmit" value="">
+                                        </form>
+                                    </div>
+                                    <!-- /.widget-search -->
+                                    <ul class="menu menu-extra">
+                                        <li class="show-search">
+                                            <a href="#">
+                                                <i class="fa fa-search"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <!-- /.nav-wrap -->
+                                <div class="btn-menu">
+                                    <span></span>
+                                </div>
+                                <!-- //mobile menu button -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    {% block page_title %}
+            <!-- Page title -->
+            <div class="page-title">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {% block breadcrumbs %}
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li>
+                                        <a href="{% url 'index' %}">{% trans 'Home' %}</a>
+                                    </li>
+                                    {% block crumbs %}
+                                        {% if title %} &rsaquo; {{ title }}{% endif %}
+                                    {% endblock %}
+                                </ul>
+                            </div>
+                            {% endblock %}
+                            <!-- /.breadcrumbs -->
+                            <div class="page-title-heading">
+                                <h1 class="title">About US</h1>
+                            </div>
+                        </div>
+                        <!-- /.col-md-12 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.page-title -->
+    {% endblock page_title %}
+        <main class="main-content" id="main-content">
+            {% block content %} {% endblock %}
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer main-footer" data-fixed="true" itemscope="itemscope">
+            <div class="footer-widgets">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="wrap-widget-footer">
+                                <div class="widget widget-footer widget_menu">
+                                    <h5 class="widget-title">Menu</h5>
+                                    <ul>
+                                        <li>
+                                            <a href="index.html">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Portfolio</a>
+                                        </li>
+                                        <li>
+                                            <a href="services-single.html">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Who We Are</a>
+                                        </li>
+                                        <li>
+                                            <a href="blog.html">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="services.html">Our Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Shop</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.widget-menu -->
+                                <div class="widget widget-footer widget_why_us">
+                                    <h5 class="widget-title">Why US</h5>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Special Offers</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Career</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Testimonials</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Clients Programs</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.widget-menu -->
+                                <div class="widget widget-footer widget_about">
+                                    <h5 class="widget-title">About</h5>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Our Story</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Team</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Main Principles</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Vision</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Miussion</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Strategies</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.widget-menu -->
+                                <div class="widget widget-footer widget_more_info">
+                                    <h5 class="widget-title">More Info</h5>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Support</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Video tutorials</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Terms of Use</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Privacy Policy</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.widget-menu -->
+                                <div class="widget widget-footer widget_contact">
+                                    <h5 class="widget-title">Contacts</h5>
+                                    <ul class="flat-information">
+                                        <li class="address">
+                                            <a href="#">2901 Marmora Road, Central New, UK</a>
+                                        </li>
+                                        <li class="email">
+                                            <a href="mailto:Themesflat@gmail.com">info@yoursite.com</a>
+                                        </li>
+                                        <li class="phone">
+                                            <a href="+84905010025">123-456-7890</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- /.widget-menu -->
+                            </div>
+                        </div>
+                        <!-- /.col-md-3 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.footer-widgets -->
+            <div class=" divider h75">
+            </div>
+            <div class="footer-contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="logo-footer">
+                                <div id="logo-footer" class="logo">
+                                    <a href="index.html" rel="home">
+                                        <img src="images/logo2.png" alt="image">
+                                    </a>
+                                </div>
+                                <!-- /.logo -->
+                            </div>
+                            <div class="copy-right">
+                                <p>© 2017 Consultant Plus. All Rights Reserved.
+                                    <a href="https://themeforest.net/user/themesflat">Terms of Use</a> and
+                                    <a href="#">Privacy Policy</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="social-links style2">
+                                <li>
+                                    <a href="#" class="twitter">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="google">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="rss">
+                                        <i class="fa fa-rss"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Go Top -->
+        <a class="go-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+
+    <!-- Javascript -->
+    <script src="{% static 'javascript/jquery.min.js' %}"></script>
+    <script src="{% static 'javascript/bootstrap.min.js' %}"></script>
+    <script src="{% static 'javascript/jquery.easing.js' %}"></script>
+    <script src="{% static 'javascript/jquery-waypoints.js' %}"></script>
+    <script src="{% static 'javascript/jquery.cookie.js"></script>
+    <script src="{% static 'javascript/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'javascript/imagesloaded.min.js' %}"></script>
+    <script src="{% static 'javascript/html5shiv.js' %}"></script>
+    <script src="{% static 'javascript/respond.min.js' %}"></script>
+    <script src="{% static 'javascript/jquery-validate.js' %}"></script>
+
+    <script src="{% static 'javascript/owl.carousel.js' %}' %}"></script>
+
+
+
+
+    <script src="{% static 'javascript/main.js' %}"></script>
+</body>
+
+</html>

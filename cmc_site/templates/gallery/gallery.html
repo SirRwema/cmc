@@ -1,0 +1,40 @@
+{% extends "pages.html" %}
+{% block title %}Our Gallery - CMC AFRICA(Center of Management and Communication){% endblock %}
+{% block page_title %}
+<!-- Page title -->
+<div class="page-title style2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"> 
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Gallery</a></li>                            
+                        <li> Gallery 2 </li>
+                    </ul>                   
+                </div><!-- /.breadcrumbs -->  
+            </div><!-- /.col-md-12 -->  
+        </div><!-- /.row -->  
+    </div><!-- /.container -->                      
+</div><!-- /.page-title --> 
+{% endblock page_title %}
+{% block content %}
+        <!-- Our Work -->
+        <section class="flat-row section-gallery pd-bottom3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrap-gallery">
+                            {% for image in gallery_images %}
+                            <div class="gallery-item">
+                                <a class="popup-gallery" href="{{ image.gallery_pics.url }}">
+                                    <img src="{{ image.gallery_pics.url }}" alt="image">
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>      
+                </div>
+            </div>
+        </section>
+{% endblock content %}

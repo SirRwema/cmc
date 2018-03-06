@@ -1,0 +1,64 @@
+{% extends "pages.html" %}
+{% block page_title %}
+<!-- Page title -->
+<div class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"> 
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>                            
+                        <li> Services Single</li>
+                    </ul>                   
+                </div><!-- /.breadcrumbs -->
+                <div class="page-title-heading">
+                    <h1 class="title">{{ service.title }}</h1>
+                </div>  
+            </div><!-- /.col-md-12 -->  
+        </div><!-- /.row -->  
+    </div><!-- /.container -->                      
+</div><!-- /.page-title -->
+{% endblock page_title %}
+{% block content %}
+<section class="flat-row v1 wrap-iconbox">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-section">
+                    <h3 class="title">Jobs Opportunities</h3>
+                    <div class="sub-title">
+                        We help you find your next career break.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for job in jobs %}
+            <div class="col-md-4">
+                <div class="iconbox style2">
+                    <div class="box-header">
+                        <div class="box-icon">
+                            <i class="{{ job.job_icon }}"></i>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <div class="box-title">{{ job.title }}</div>
+                        <p>{{ job.description }}</p>
+                    </div>
+                    <div class="readmore">
+                        <a href="{% url 'job_details' job.id %}">More Details</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="divider h35">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

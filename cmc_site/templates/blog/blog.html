@@ -1,0 +1,75 @@
+{% extends "pages.html" %}
+{% block title %}Our Blog - CMC AFRICA(Center of Management and Communication){% endblock %}
+{% block page_title %}
+<!-- Page title -->
+<div class="page-title style2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"> 
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Blog</a></li>                            
+                        <li> Our Blog</li>
+                    </ul>                   
+                </div><!-- /.breadcrumbs -->  
+            </div><!-- /.col-md-12 -->  
+        </div><!-- /.row -->  
+    </div><!-- /.container -->                      
+</div><!-- /.page-title --> 
+{% endblock page_title %}
+{% block content %}
+        <!-- Blog posts -->
+        <section class="main-content blog-posts flat-row pd-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="sidebar">
+                                <div class="widget widget_search">
+                                    <form role="search" method="get" class="search-form" action="#">
+                                        <input type="search" class="search-field" placeholder="Search…" value="" name="s"> 
+                                        <input type="submit" class="search-submit" id="searchwidget" value="">
+                                    </form>                            
+                                </div><!-- /.widget-search -->
+                            </div><!-- /.sidebar -->
+                        </div><!-- /.col-md-3 -->
+                        <div class="col-md-9">
+                            <div class="post-wrap">
+                                {% for post in blog_posts %}
+                                <article class="post clearfix">
+                                    <div class="featured-post">
+                                        <a href="{% url 'blog_details' post.id %}"> <img src="{{ post.blog_image.url }}" alt="image"></a>
+                                    </div><!-- /.feature-post -->
+                                    <div class="content-post">  
+                                        <ul class="meta-post clearfix">
+                                            <li class="date">
+                                                <a href="#">{{ post.date_added}}</a>
+                                            </li>
+                                            <li class="author">
+                                                <a href="#">By Admin</a>
+                                            </li>
+                                        </ul><!-- /.meta-post -->
+                                        <h2 class="title-post"><a href="{% url 'blog_details' post.id %}">
+                                        {{ post.title | capfirst }}</a></h2>
+                                        <div class="entry-post excerpt">                              
+                                            <p>{{ post.description | truncatewords:100 }}</p>
+                                            <div class="more-link"><button type="button" class="flat-button" onclick="location.href='{% url 'blog_details' post.id %}'">Read More</button></div>
+                                        </div>
+                                    </div><!-- /.content-post -->
+                                </article> 
+                                {% endfor %}                               
+                            </div><!-- /.post-wrap -->  
+                            <div class="blog-pagination">
+                                <ul class="flat-pagination clearfix">
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li class="next"><a href="#">Next</a></li>                                                                
+                                </ul><!-- /.flat-pagination -->
+                            </div><!-- /.blog-pagination -->                  
+                        </div><!-- /.col-md-9 -->    
+                                    
+                    </div><!-- /.row -->           
+                </div><!-- /.container -->   
+            </section>
+{% endblock %}

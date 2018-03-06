@@ -1,0 +1,198 @@
+{% extends "base.html" %} 
+{% block content %}
+<section class="flat-row v12 wrap-iconbox">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-section">
+                    <h1 class="title">Services</h1>
+                    <div class="sub-title">
+                        We shepherd the lost sheep and mend broken the bridges.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for service in services|slice:":3" %}
+            <div class="col-md-4">
+                <div class="iconbox">
+                    <div class="box-header">
+                        <div class="box-icon">
+                            <i class="{{ service.services_icon }}"></i>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <div class="box-title">{{ service.title }}</div>
+                        <p>{{ service.description | truncatewords:20 }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="section-video parallax parallax4">
+    <div class="overlay-parallax style3"></div>
+    <div class="video">
+        <div class="container">
+            <div class="row">
+                {% for about in about_us|slice:":1" %}
+                <div class="col-md-12 wrap-video">
+                    <div class="title-section left style4">
+                        <h1 class="title color-white">{{ about.frontpage_title }}</h1>
+                        <div class="sub-title font-playfair">
+                            {{ about.sub_text }}.
+                        </div>
+                    </div>
+                    <div class="flat-control">
+                        <a class="fancybox fa fa-play" data-type="iframe" href="https://www.youtube.com/watch?v=L6zZOUrJLFs?autoplay=1">
+                        </a>
+                        <span>{{ about.video_intro }}</span>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="flat-row v1 wrap-iconbox">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-section">
+                    <h1 class="title">Jobs</h1>
+                    <div class="sub-title">
+                        We help you find your next career break.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for job in jobs|slice:":5" %}
+            <div class="col-md-4">
+                <div class="iconbox style2">
+                    <div class="box-header">
+                        <div class="box-icon">
+                            <i class="{{ job.job_icon }}"></i>
+                        </div>
+                    </div>
+                    <div class="box-content">
+                        <div class="box-title">{{ job.title }}</div>
+                        <p>{{ job.description }}</p>
+                    </div>
+                    <div class="readmore">
+                        <a href="services-single.html">More Details</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="divider h35">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="flat-row v4 parallax parallax1">
+    <div class="overlay-parallax"></div>
+    <div class="container">
+        <div class="col-md-12">
+            <div class="flat-testimonials" data-item="1" data-nav="false" data-dots="false" data-auto="true">
+                <div class="testimonials style2">
+                    <div class="message">
+                        <blockquote class="whisper">
+                            “Economic services provided by the finance industry, which encompasses a broad range of businesses that manage money, including
+                            credit unions.”
+                        </blockquote>
+                    </div>
+                    <div class="avatar">
+                        <div class="name">George Johanson</div>
+                        <div class="position">Founder & CEO, Themelucky95</div>
+                        <div class="flat-start">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials style2">
+                    <div class="message">
+                        <blockquote class="whisper">
+                            “Economic services provided by the finance industry, which encompasses a broad range of businesses that manage money, including
+                            credit unions.”
+                        </blockquote>
+                    </div>
+                    <div class="avatar">
+                        <div class="name">David Nicholson</div>
+                        <div class="position">Founder & CEO, Themeflat</div>
+                        <div class="flat-start">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="flat-row blog-shortcode">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-section">
+                    <h1 class="title">News & Blog</h1>
+                    <div class="sub-title">
+                        We’ll be with you on every walk of life on how to identify new opportunities.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="blog-carousel">
+            <div class="post-shortcode">
+                {% for post in blog_posts|slice:":5" %}
+                <article class="post post-grid clearfix">
+                    <div class="featured-post">
+                        <a href="blog-single.html">
+                            <img src="{{ post.blog_image.url }}" alt="image">
+                        </a>
+                    </div>
+                    <!-- /.feature-post -->
+                    <div class="content-post">
+                        <h2 class="title-post">
+                            <a href="blog-single.html">
+                                {{ post.title }}</a>
+                        </h2>
+                        <ul class="meta-post clearfix">
+                            <li class="date">
+                                <a href="#">{{ post.date_added }}</a>
+                            </li>
+                            <li class="categories">
+                                <a href="#">By: WordPress</a>
+                            </li>
+                        </ul>
+                        <!-- /.meta-post -->
+                    </div>
+                    <!-- /.content-post -->
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

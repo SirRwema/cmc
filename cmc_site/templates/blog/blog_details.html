@@ -1,0 +1,64 @@
+{% extends "pages.html" %}
+{% block content %}
+        <!-- Blog posts -->
+<section class="main-content blog-single flat-row pd-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <div class="widget widget_search">
+                        <form role="search" method="get" class="search-form" action="#">
+                            <input type="search" class="search-field" placeholder="Search…" value="" name="s"> 
+                            <input type="submit" class="search-submit" id="searchwidget" value="">
+                        </form>                            
+                    </div><!-- /.widget-search -->
+                </div><!-- /.sidebar -->
+            </div><!-- /.col-md-3 -->
+            <div class="col-md-9">
+                <div class="post-wrap">
+                    <article class="post clearfix">
+                        <div class="featured-post">
+                            <img src="{{ blog_detail.blog_image.url }}" alt="image">
+                        </div><!-- /.feature-post -->
+                        <div class="content-post">  
+                            <ul class="meta-post clearfix">
+                                <li class="date">
+                                    <a href="#">{{ blog_detail.date_added }}</a>
+                                </li>
+                                <li class="author">
+                                    <a href="#">By Admin</a>
+                                </li>
+                                <li class="categories"> 
+                                    <a href="#">In WordPress</a>
+                                </li>
+                            </ul><!-- /.meta-post -->
+                            <h2 class="title-post">{{ blog_detail.title }}</h2>
+                            <div class="entry-post excerpt">
+                                <p>{{ blog_detail.description }}</p>
+                            </div>
+                            <div class="footer-post">
+                                <div class="tags-links">
+                                    <strong>Tags: </strong>
+                                    <a href="#" rel="tag">wordpress,</a>
+                                    <a href="#" rel="tag"> joomla,</a>
+                                    <a href="#" rel="tag"> prestashop,</a>
+                                    <a href="#" rel="tag">drupal</a>
+                                </div>
+                                <div class="social-share-article">
+                                    <ul class="social-links style3">
+                                        <li><strong>Share:</strong></li>
+                                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" class="google"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#" class="rss"><i class="fa fa-rss"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>  
+                        </div><!-- /.content-post -->
+                    </article>
+                </div><!-- /.post-wrap -->                   
+            </div><!-- /.col-md-9 -->                            
+        </div><!-- /.row -->           
+    </div><!-- /.container -->   
+</section> 
+{% endblock %}

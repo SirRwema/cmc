@@ -1,0 +1,72 @@
+{% extends "pages.html" %}
+{% block title %}Our Services - CMC AFRICA(Center of Management and Communication){% endblock %}
+{% block page_title %}
+<!-- Page title -->
+<div class="page-title style2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"> 
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>                            
+                        <li> Services Version 2</li>
+                    </ul>                   
+                </div><!-- /.breadcrumbs -->  
+            </div><!-- /.col-md-12 -->  
+        </div><!-- /.row -->  
+    </div><!-- /.container -->                      
+</div><!-- /.page-title --> 
+{% endblock page_title %}
+{% block content %}
+<!-- Services -->
+<section class="flat-row section-services v16">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="featured-services">
+                    <img src="{{ services_banner.service_banner.url }}" alt="image">
+                </div>
+                <div class="divider h98"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-section">
+                    <h1 class="title">The Areas of Practice</h1>
+                    <div class="sub-title">
+                        Simply looking for a pretty website? We're much more.
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for service in services %}
+            <div class="col-md-4">
+                <div class="imgbox style2 position-title">
+                    <div class="box-header">
+                        <div class="box-img">
+                            <a href="{% url 'service_details' service.id %}"><img src="{{ service.services_image.url }}" alt="image"></a>
+                        </div>
+                        <div class="box-title"><a href="{% url 'service_details' service.id %}">{{ service.title|capfirst }}</a></div> 
+                    </div>
+                    <div class="box-content">
+                        <p>{{service.description | truncatewords:20}}</p>
+                        <div class="explore">
+                            <a class="read-more" href="{% url 'service_details' service.id %}" title="">Read More</a>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+        <div class="divider h65"></div>
+
+    </div>
+</section> 
+{% endblock %}

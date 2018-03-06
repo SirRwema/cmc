@@ -1,0 +1,58 @@
+{% extends "pages.html" %}
+{% block page_title %}
+<!-- Page title -->
+<div class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"> 
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>                            
+                        <li> Services Single</li>
+                    </ul>                   
+                </div><!-- /.breadcrumbs -->
+                <div class="page-title-heading">
+                    <h1 class="title">{{ event.title }}</h1>
+                </div>  
+            </div><!-- /.col-md-12 -->  
+        </div><!-- /.row -->  
+    </div><!-- /.container -->                      
+</div><!-- /.page-title -->
+{% endblock page_title %}
+{% block content %}
+        
+        <!-- Services -->
+        <section class="flat-row section-services pd-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="wrap-services-single">
+                                <div class="featured-services">
+                                <img src="{{ event.events_image.url }}" alt="image">
+                                </div>
+                                <div class="flat-text text1 ">
+                                    <h5>Start Date:{{ event.start_date }} &nbsp; End Date:{{ event.end_date }}</h5>
+                                    
+                                    <p>{{ event.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="sidebar">
+                                <div class="widget widget_contact2">
+                                    <h5 class="widget-title style2">Need our help?</h5>
+                                    <p>Contact us at the Consultant Plus office nearest to you or submit a business inquiry online.</p>
+                                    <button type="button" class="flat-button">Contact Us</button>
+                                </div><!-- /.widget-contact -->
+                                <div class="widget widget_download">
+                                    <a href="#"><i class="fa fa-file-pdf-o"></i>{{ event.start_time }}</a>
+                                    <a href="#"><i class="fa fa-file-pdf-o"></i>{{ event.end_time }}</a>
+                                </div><!-- /.widget-download -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+{% endblock %}

@@ -1,0 +1,655 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+
+    <head>
+        <!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+        <title>{% block title %}CMC Africa - We mentor the lost sheep & mend the broken bridges.{% endblock title %}</title>
+
+        <meta name="author" content="cmcafrica.com">
+
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- Bootstrap  -->
+        <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/bootstrap.css' %}">
+
+        <!-- Theme Style -->
+        <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/style.css' %}">
+
+        <!-- Responsive -->
+        <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/responsive.css' %}">
+
+        <!-- Colors -->
+        <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/colors/color1.css %'}" id="colors">
+
+        <!-- REVOLUTION LAYERS STYLES -->
+        <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/layers.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'revolution/css/settings.css' %}">
+
+        <!-- Animation Style -->
+        <link rel="stylesheet" type="text/css" href="{% static 'stylesheets/animate.css' %}">
+
+        <!-- Favicon and touch icons  -->
+        <link href="icon/apple-touch-icon-48-precomposed.png" rel="icon" sizes="48x48">
+        <link href="icon/apple-touch-icon-32-precomposed.png" rel="icon">
+        <link href="icon/favicon.png" rel="shortcut icon">
+    </head>
+
+    <body class="header_sticky page-loading">
+        <!-- Preloader -->
+        <div class="loading-overlay">
+        </div>
+
+        <!-- Boxed -->
+        <div class="boxed">
+
+            <div class="flat-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="info-text">{{ company.co_name }} - We mentor the lost sheep & mend the broken bridges.</p>
+                        </div>
+                        <!-- /.col-md-6 -->
+                        <div class="col-md-6">
+                            <p class="info-link">
+                                <a href="#">{{ company.phone_number }}</a>{{ company.co_email }}</p>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.top -->
+
+            <div class="flat-header-wrap">
+                <!-- Header -->
+                <div class="header widget-header clearfix">
+                    <div class="container">
+                        <div class="row">
+                            <div class="header-wrap clearfix">
+                                <div class="col-md-3">
+                                    <div id="logo" class="logo">
+                                        <a href="{% url 'index' %}" rel="home">
+                                            <img src="{{ company.co_PC_logo.url }}" alt="image">
+                                        </a>
+                                    </div>
+                                    <!-- /.logo -->
+
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="wrap-widget-header">
+                                        <div class="widget widget_text">
+                                            <ul class="social-links">
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-google-plus"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-rss"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <aside id="text-2" class="widget widget_text">
+                                            <div class="textwidget">
+                                                <div class="open-hours">
+                                                    <p class="icon">
+                                                        <i class="icon_clock_alt"></i>
+                                                    </p>
+                                                    <p class="text">Open House
+                                                        <br>
+                                                        <span>Mon - Sat: 8.00 am - 5.30 pm
+                                                            <br>Sunday: CLOSED</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </aside>
+                                        <aside id="text-1" class="widget widget_text">
+                                            <div class="textwidget">
+                                                <div class="open-hours">
+                                                    <p class="icon">
+                                                        <i class=" icon_pin_alt"></i>
+                                                    </p>
+                                                    <p class="text">Address
+                                                        <br>
+                                                        <span>2901 Marmora Road, Central New,
+                                                            <br>United Kingdom.</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </aside>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.header-wrap -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                </div>
+                <!-- /.header -->
+                <header id="header" class="header-v1 nav header-style1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="flat-wrap-header">
+                                    <div class="nav-wrap">
+                                        <nav id="mainnav" class="mainnav">
+                                            <ul class="menu">
+                                                <li class="active">
+                                                    <a href="{% url 'index' %}">Home</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'about_page' %}">About Us</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'services_page' %}">Services</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'jobs_page' %}">Jobs</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'events_page' %}">Events</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'gallery_page' %}">Gallery</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'blog_page' %}">Blog</a>
+                                                </li>
+                                                <li>
+                                                    <a href="contact.html">Contact us</a>
+                                                </li>
+                                            </ul>
+                                            <!-- /.menu -->
+                                        </nav>
+                                        <!-- /.mainnav -->
+                                        <div class="widget widget_search top-search">
+                                            <form role="search" method="get" class="search-form" action="#">
+                                                <input type="search" class="search-field" placeholder="Search…" value="" name="s">
+                                                <input type="submit" class="search-submit" id="searchsubmit" value="">
+                                            </form>
+                                        </div>
+                                        <!-- /.widget-search -->
+                                        <ul class="menu menu-extra">
+                                            <li class="show-search">
+                                                <a href="#">
+                                                    <i class="fa fa-search"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                    <!-- /.nav-wrap -->
+                                    <div class="btn-menu">
+                                        <span></span>
+                                    </div>
+                                    <!-- //mobile menu button -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+
+
+            <main class="main-content" id="main-content">
+
+                    <div id="rev_slider_1078_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="classic4export" data-source="gallery" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+                            <!-- START REVOLUTION SLIDER 5.3.0.2 auto mode -->
+                            <div id="rev_slider_1078_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.3.0.2">
+                                <div class="slotholder"></div>
+                                <ul><!-- SLIDE  -->
+
+                                    <!-- SLIDE 2 -->
+                                    <li data-index="rs-3050" data-transition="fade" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"    data-rotate="0"  data-saveperformance="off"  data-title="Ken Burns" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-duration="0">                        
+
+                                        <!-- MAIN IMAGE -->
+                                        <img src="{{ slide1.slider_image.url }}"  alt=""  data-bgposition="center center" data-kenburns="off" data-duration="0" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                                        <!-- LAYERS -->
+
+                                        <!-- LAYER NR. 12 -->
+                                        <div class="tp-caption title-slide" 
+                                            id="slide-3050-layer-1" 
+                                            data-x="['center','center','center','center']" data-hoffset="['-10','-10','-10','-10']" 
+                                            data-y="['middle','middle','middle','middle']" data-voffset="['-112','-112','-95','-80']" 
+                                            data-fontsize="['65','65','45','30']"
+                                            data-lineheight="['80','80','45','30']"
+                                            data-fontweight="['600','600','600','600']"
+                                            data-width="none"
+                                            data-height="none"
+                                            data-whitespace="nowrap"
+                                 
+                                            data-type="text" 
+                                            data-responsive_offset="on"                             
+
+                                            data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                                            data-textAlign="['center','center','center','center']"
+                                            data-paddingtop="[10,10,10,10]"
+                                            data-paddingright="[0,0,0,0]"
+                                            data-paddingbottom="[0,0,0,0"
+                                            data-paddingleft="[0,0,0,0]"
+
+                                            style="z-index: 16; white-space: nowrap;text-transform:left;">{{ slide1.title }}
+                                        </div>
+
+                                        <!-- LAYER NR. 13 -->
+                                        <div class="tp-caption sub-title" 
+                                            id="slide-3050-layer-4" 
+                                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                            data-y="['middle','middle','middle','middle']" data-voffset="['-17','-17','5','5']"
+                                            data-fontsize="['20',20','20','14']"
+                                            data-lineheight="['35',35','35','20']"
+                                            data-fontweight="['300','300','300','300']"
+                                            data-width="['1000','1000','600','400']"
+                                            data-height="none"
+                                            data-whitespace="['nowrap',normal','normal','normal']" 
+                                 
+                                            data-type="text" 
+                                            data-responsive_offset="on" 
+
+                                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                            data-textAlign="['center','center','center','center']"
+                                            data-paddingtop="[0,0,0,0]"
+                                            data-paddingright="[0,0,0,0]"
+                                            data-paddingbottom="[0,0,0,0]"
+                                            data-paddingleft="[0,0,0,0]"
+
+                                            style="z-index: 17; white-space: nowrap;text-transform:left;">{{ slide1.sub_text }} 
+                                        </div>
+
+                                        <a href="#" target="_self" class="tp-caption flat-button-slider flat-button border pd-style2 lettspacing_08"         
+
+                                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                     
+                                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                        data-y="['middle','middle','middle','middle']" data-voffset="['109','109','109','109']"
+                                        data-width="['auto']"
+                                        data-height="['auto']">{{ slide1.button_text }}
+                                        </a><!-- END LAYER LINK -->                            
+                                    </li> 
+                            
+                                    <!-- SLIDE 1 -->
+                                    <li data-index="rs-3049" data-transition="random-static" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"    data-rotate="0"  data-saveperformance="off"  data-title="Ken Burns" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-duration="0">                        
+
+                                        <!-- MAIN IMAGE -->
+                                        <img src="{{ slide2.slider_image.url }}"  alt=""  data-bgposition="center center" data-kenburns="off" data-duration="0" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                                        <!-- LAYERS -->
+
+                                        <!-- LAYER NR. 12 -->
+                                        <div class="tp-caption title-slide" 
+                                            id="slide-3049-layer-1" 
+                                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                            data-y="['middle','middle','middle','middle']" data-voffset="['-112','-112','-95','-80']" 
+                                            data-fontsize="['65','65','45','30']"
+                                            data-lineheight="['80','80','45','30']"
+                                            data-fontweight="['600','600','600','600']"
+                                            data-width="none"
+                                            data-height="none"
+                                            data-whitespace="nowrap"
+                                 
+                                            data-type="text" 
+                                            data-responsive_offset="on"                             
+
+                                            data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                                            data-textAlign="['center','center','center','center']"
+                                            data-paddingtop="[10,10,10,10]"
+                                            data-paddingright="[0,0,0,0]"
+                                            data-paddingbottom="[0,0,0,0"
+                                            data-paddingleft="[0,0,0,0]"
+
+                                            style="z-index: 16; white-space: nowrap;text-transform:left;">{{ slide2.title }}
+                                        </div>
+
+                                        <!-- LAYER NR. 13 -->
+                                        <div class="tp-caption sub-title" 
+                                            id="slide-3049-layer-4" 
+                                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                            data-y="['middle','middle','middle','middle']" data-voffset="['-17','-17','5','5']"
+                                            data-fontsize="['20',20','20','14']"
+                                            data-lineheight="['35',35','35','20']"
+                                            data-fontweight="['300','300','300','300']"
+                                            data-width="['1000','1000','600','400']"
+                                            data-height="none"
+                                            data-whitespace="['nowrap',normal','normal','normal']" 
+                                 
+                                            data-type="text" 
+                                            data-responsive_offset="on" 
+
+                                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                            data-textAlign="['center','center','center','center']"
+                                            data-paddingtop="[0,0,0,0]"
+                                            data-paddingright="[0,0,0,0]"
+                                            data-paddingbottom="[0,0,0,0]"
+                                            data-paddingleft="[0,0,0,0]"
+
+                                            style="z-index: 17; white-space: nowrap;text-transform:left;">{{ slide2.sub_text }} 
+                                        </div>
+
+                                        <a href="#" target="_self" class="tp-caption flat-button-slider flat-button border lettspacing_08"         
+
+                                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                     
+                                        data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                        data-y="['middle','middle','middle','middle']" data-voffset="['109','109','109','109']"
+                                        data-width="['auto']"
+                                        data-height="['auto']">{{ slide2.button_text }}
+                                        </a><!-- END LAYER LINK -->                            
+                                    </li>  
+                                    <!-- SLIDE 1 -->
+                                    <li data-index="rs-3049" data-transition="random-static" data-slotamount="7" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"    data-rotate="0"  data-saveperformance="off"  data-title="Ken Burns" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-duration="0">                        
+
+                                            <!-- MAIN IMAGE -->
+                                            <img src="{{ slide3.slider_image.url }}"  alt=""  data-bgposition="center center" data-kenburns="off" data-duration="0" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                                            <!-- LAYERS -->
+    
+                                            <!-- LAYER NR. 12 -->
+                                            <div class="tp-caption title-slide" 
+                                                id="slide-3049-layer-1" 
+                                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                                data-y="['middle','middle','middle','middle']" data-voffset="['-112','-112','-95','-80']" 
+                                                data-fontsize="['65','65','45','30']"
+                                                data-lineheight="['80','80','45','30']"
+                                                data-fontweight="['600','600','600','600']"
+                                                data-width="none"
+                                                data-height="none"
+                                                data-whitespace="nowrap"
+                                     
+                                                data-type="text" 
+                                                data-responsive_offset="on"                             
+    
+                                                data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+    
+                                                data-textAlign="['center','center','center','center']"
+                                                data-paddingtop="[10,10,10,10]"
+                                                data-paddingright="[0,0,0,0]"
+                                                data-paddingbottom="[0,0,0,0"
+                                                data-paddingleft="[0,0,0,0]"
+    
+                                                style="z-index: 16; white-space: nowrap;text-transform:left;">{{ slide3.title }}
+                                            </div>
+    
+                                            <!-- LAYER NR. 13 -->
+                                            <div class="tp-caption sub-title" 
+                                                id="slide-3049-layer-4" 
+                                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                                data-y="['middle','middle','middle','middle']" data-voffset="['-17','-17','5','5']"
+                                                data-fontsize="['20',20','20','14']"
+                                                data-lineheight="['35',35','35','20']"
+                                                data-fontweight="['300','300','300','300']"
+                                                data-width="['1000','1000','600','400']"
+                                                data-height="none"
+                                                data-whitespace="['nowrap',normal','normal','normal']" 
+                                     
+                                                data-type="text" 
+                                                data-responsive_offset="on" 
+    
+                                                data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":1500,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                                data-textAlign="['center','center','center','center']"
+                                                data-paddingtop="[0,0,0,0]"
+                                                data-paddingright="[0,0,0,0]"
+                                                data-paddingbottom="[0,0,0,0]"
+                                                data-paddingleft="[0,0,0,0]"
+    
+                                                style="z-index: 17; white-space: nowrap;text-transform:left;">{{ slide3.sub_text }} 
+                                            </div>
+    
+                                            <a href="#" target="_self" class="tp-caption flat-button-slider flat-button border lettspacing_08"         
+    
+                                            data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                         
+                                            data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+                                            data-y="['middle','middle','middle','middle']" data-voffset="['109','109','109','109']"
+                                            data-width="['auto']"
+                                            data-height="['auto']">{{ slide3.button_text }}
+                                            </a><!-- END LAYER LINK -->                            
+                                        </li> 
+                                    
+                                </ul>
+                            </div>
+            </div><!-- END REVOLUTION SLIDER --> 
+                {% block content %} {% endblock content %}
+            </main>
+
+            <!-- Footer -->
+            <!-- Footer -->
+            <footer id="footer" class="footer main-footer" data-fixed="true" itemscope="itemscope">
+                <div class="footer-widgets">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="wrap-widget-footer">
+                                    <div class="widget widget-footer widget_menu">
+                                        <h5 class="widget-title">Menu</h5>
+                                        <ul>
+                                            <li>
+                                                <a href="index.html">Home</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Portfolio</a>
+                                            </li>
+                                            <li>
+                                                <a href="services-single.html">About Us</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Who We Are</a>
+                                            </li>
+                                            <li>
+                                                <a href="blog.html">Blog</a>
+                                            </li>
+                                            <li>
+                                                <a href="services.html">Our Services</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Shop</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.widget-menu -->
+                                    <div class="widget widget-footer widget_why_us">
+                                        <h5 class="widget-title">Why US</h5>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Special Offers</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Career</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Testimonials</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Clients Programs</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.widget-menu -->
+                                    <div class="widget widget-footer widget_about">
+                                        <h5 class="widget-title">About</h5>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Our Story</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Team</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Main Principles</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Vision</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Miussion</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Strategies</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.widget-menu -->
+                                    <div class="widget widget-footer widget_more_info">
+                                        <h5 class="widget-title">More Info</h5>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Support</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Video tutorials</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Terms of Use</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Privacy Policy</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.widget-menu -->
+                                    <div class="widget widget-footer widget_contact">
+                                        <h5 class="widget-title">Contacts</h5>
+                                        <ul class="flat-information">
+                                            <li class="address">
+                                                <a href="#">2901 Marmora Road, Central New, UK</a>
+                                            </li>
+                                            <li class="email">
+                                                <a href="mailto:Themesflat@gmail.com">info@yoursite.com</a>
+                                            </li>
+                                            <li class="phone">
+                                                <a href="+84905010025">123-456-7890</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.widget-menu -->
+                                </div>
+                            </div>
+                            <!-- /.col-md-3 -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.footer-widgets -->
+                <div class=" divider h75">
+                </div>
+                <div class="footer-contact">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="logo-footer">
+                                    <div id="logo-footer" class="logo">
+                                        <a href="{% url 'index' %}" rel="home">
+                                            <img src="{{ company.co_PC_logo.url }}" alt="image">
+                                        </a>
+                                    </div>
+                                    <!-- /.logo -->
+                                </div>
+                                <div class="copy-right">
+                                    <p>© 2018 {{ company.co_name }}. All Rights Reserved.
+                                        <a href="#">Sitemap</a>&nbsp;
+                                        <a href="https://tumukundearnold.com">Developed By: Tumukunde Arnold</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="social-links style2">
+                                    <li>
+                                        <a href="#" class="twitter">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="facebook">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="google">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="rss">
+                                            <i class="fa fa-rss"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Go Top -->
+            <a class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+
+        <!-- Javascript -->
+        <script src="{% static 'javascript/jquery.min.js' %}"></script>
+        <script src="{% static 'javascript/bootstrap.min.js' %}"></script>
+        <script src="{% static 'javascript/jquery.easing.js' %}"></script>
+
+        <script src="{% static 'javascript/jquery-waypoints.js' %}"></script>
+        <script src="{% static 'javascript/jquery-countTo.js' %}"></script>
+        <script src="{% static 'javascript/imagesloaded.min.js' %}"></script>
+
+        <script src="{% static 'javascript/owl.carousel.js' %}"></script>
+        <script src="{% static 'javascript/jquery-validate.js' %}"></script>
+        <script src="{% static 'javascript/html5shiv.js' %}"></script>
+        <script src="{% static 'javascript/respond.min.js' %}"></script>
+
+
+        <script src="{% static 'javascript/jquery.cookie.js' %}"></script>
+        <!--   -->
+        <script src="{% static 'javascript/jquery.magnific-popup.min.js' %}"></script>
+
+
+
+        <script src="{% static 'javascript/jquery.fancybox.js' %}"></script>
+
+        <script src="{% static 'javascript/main.js' %}"></script>
+
+        <!-- Revolution Slider -->
+        <script src="{% static 'revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+        <script src="{% static 'revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+        <script src="{% static 'revolution/js/slider.js' %}"></script>
+
+        <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+        <script src="{% static 'revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+        <script src="{% static 'revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+        <script src="{% static 'revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+        <script src="{% static 'revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+        <script src="{% static 'revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+        <script src="{% static 'revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+        <script src="{% static 'revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+        <script src="{% static 'revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+        <script src="{% static 'revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+    </body>
+
+</html>

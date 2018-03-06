@@ -1,0 +1,53 @@
+{% extends "pages.html" %}
+{% block page_title %}
+<!-- Page title -->
+<div class="page-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"> 
+                <div class="breadcrumbs">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>                            
+                        <li> Services Single</li>
+                    </ul>                   
+                </div><!-- /.breadcrumbs -->
+                <div class="page-title-heading">
+                    <h1 class="title">{{ job.title }}</h1>
+                </div>  
+            </div><!-- /.col-md-12 -->  
+        </div><!-- /.row -->  
+    </div><!-- /.container -->                      
+</div><!-- /.page-title -->
+{% endblock page_title %}
+{% block content %}
+        
+        <!-- Services -->
+        <section class="flat-row section-services pd-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="wrap-services-single">
+                                <div class="flat-text text1 ">
+                                    <h6>{{ job.category }}</h6>
+                                    <p>{{ job.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="sidebar">
+                                <div class="widget widget_contact2">
+                                    <h5 class="widget-title style2">Need our help?</h5>
+                                    <p>Contact us at the Consultant Plus office nearest to you or submit a business inquiry online.</p>
+                                    <button type="button" class="flat-button">Contact Us</button>
+                                </div><!-- /.widget-contact -->
+                                <div class="widget widget_download">
+                                    <a href="#"><i class="fa fa-file-pdf-o"></i>{{ job.Expiry_date }}</a>
+                                </div><!-- /.widget-download -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+{% endblock %}
